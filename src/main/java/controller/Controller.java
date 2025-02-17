@@ -26,7 +26,11 @@ public class Controller {
         //metodosHabitats.readListHabitats(habitatsMap);
 
         //inserccion de datos en mongo
-        logicaInserccionDatos(pinguinsMap, habitatsMap, crudMongo);
+        //logicaInserccionDatos(pinguinsMap, habitatsMap, crudMongo);
+
+        //lectura datos de base de datos
+        metodosPinguinos.readListPinguins(crudMongo.getDataFromDb("penguins"));
+        metodosHabitats.readListHabitats(crudMongo.getDataFromDb("habitats"));
     }
 
     public void logicaInserccionDatos(List<Map<String, Object>> pinguinsMap, List<Map<String, Object>> habitatsMap, CrudMongo crudMongo){

@@ -5,6 +5,7 @@ import com.mongodb.client.MongoDatabase;
 import config.MongoConfig;
 import org.bson.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -30,5 +31,10 @@ public class CrudMongo {
             collection.insertOne(document);
         }
         System.out.println("Coleccion de habitats insertada correctamente");
+    }
+
+    public List<Map<String, Object>> getDataFromDb(String coleccion){
+        MongoCollection<Document> collection = mongoDatabase.getCollection(coleccion);
+        return collection.find().into(new ArrayList<>());
     }
 }
