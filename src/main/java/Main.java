@@ -1,3 +1,4 @@
+import config.MongoConfig;
 import controller.Controller;
 
 public class Main {
