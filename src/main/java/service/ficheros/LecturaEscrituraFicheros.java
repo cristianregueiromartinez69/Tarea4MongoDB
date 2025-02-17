@@ -13,11 +13,11 @@ import java.util.Map;
 
 public class LecturaEscrituraFicheros {
 
-    public List<Map<String, Object>> readXmlFilePinguienos(){
+    public List<Map<String, Object>> readXmlFilePinguienos(String path){
         XmlMapper xmlMapper = new XmlMapper();
         try{
 
-            PinguinsWrapper wrapper = xmlMapper.readValue(new File("pingüinos.xml"), PinguinsWrapper.class);
+            PinguinsWrapper wrapper = xmlMapper.readValue(new File(path), PinguinsWrapper.class);
             return wrapper.getPinguinsMap();
         } catch (IOException e) {
             System.out.println("Ups, error al leer el fichero xml de pinguinos");
@@ -25,11 +25,11 @@ public class LecturaEscrituraFicheros {
         return null;
     }
 
-    public List<Map<String, Object>> readXmlFileHabitats(){
+    public List<Map<String, Object>> readXmlFileHabitats(String path){
         XmlMapper xmlMapper = new XmlMapper();
         try{
 
-            HabitatsWrapper wrapper = xmlMapper.readValue(new File("habitats.xml"), HabitatsWrapper.class);
+            HabitatsWrapper wrapper = xmlMapper.readValue(new File(path), HabitatsWrapper.class);
             return wrapper.getHabitatsMap();
         } catch (IOException e) {
             System.out.println("Ups, error al leer el fichero xml de habitats");

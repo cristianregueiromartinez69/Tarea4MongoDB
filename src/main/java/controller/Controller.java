@@ -19,19 +19,31 @@ public class Controller {
         MetodosHabitats metodosHabitats = new MetodosHabitats();
         CrudMongo crudMongo = new CrudMongo();
 
-        //lectura de xml
-        List<Map<String, Object>> pinguinsMap= leFich.readXmlFilePinguienos();
-        List<Map<String, Object>> habitatsMap = leFich.readXmlFileHabitats();
-        //metodosPinguinos.readListPinguins(pinguinsMap);
-        //metodosHabitats.readListHabitats(habitatsMap);
 
-        //inserccion de datos en mongo
-        //logicaInserccionDatos(pinguinsMap, habitatsMap, crudMongo);
+        List<Map<String, Object>> pinguinsMapSinActualizar= leFich.readXmlFilePinguienos("pingüinos.xml");
+        List<Map<String, Object>> habitatsMapSinActualizar = leFich.readXmlFileHabitats("habitats.xml");
 
-        //lectura datos de base de datos
+        /* lectura de xml sin actualizar
+        metodosPinguinos.readListPinguins(pinguinsMapSinActualizar);
+        metodosHabitats.readListHabitats(habitatsMapSinActualizar);
+         */
+
+        /* inserccion datos mongo
+        logicaInserccionDatos(pinguinsMap, habitatsMap, crudMongo);
+         */
+
+        /* lectura base de datos
         metodosPinguinos.readListPinguins(crudMongo.getDataFromDb("penguins"));
         metodosHabitats.readListHabitats(crudMongo.getDataFromDb("habitats"));
+         */
+
+        List<Map<String, Object>> pinguinsMapActualizado = leFich.readXmlFilePinguienos("pingüinosActualizado.xml");
+        List<Map<String, Object>> habitatsMapActualizado = leFich.readXmlFileHabitats("habitatsActualizado.xml");
+        metodosPinguinos.readListPinguins(pinguinsMapActualizado);
+        metodosHabitats.readListHabitats(habitatsMapActualizado);
+
     }
+
 
     public void logicaInserccionDatos(List<Map<String, Object>> pinguinsMap, List<Map<String, Object>> habitatsMap, CrudMongo crudMongo){
         crudMongo.inserdataHabitats(habitatsMap);

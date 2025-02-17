@@ -9,7 +9,7 @@ public class MetodosPinguinos {
 
     public void readListPinguins(List<Map<String, Object>> pinguinsMap) {
         for(Map<String, Object> equipo : pinguinsMap) {
-            System.out.println("\nHabitat: ");
+            System.out.println("\nPingúino bonito: ");
             for(Map.Entry<String, Object> pinguins : equipo.entrySet()){
                 System.out.println(pinguins.getKey() + ": " + pinguins.getValue());
             }
