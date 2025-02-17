@@ -7,9 +7,7 @@ import com.mongodb.client.model.Updates;
 import config.MongoConfig;
 import org.bson.Document;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CrudMongo {
 
@@ -65,7 +63,8 @@ public class CrudMongo {
                     );
                     System.out.println("Documento de pingüinos actualizado correctamente");
                 } else {
-                    System.out.println("coleccion de pingüino no encontrada en la base de datos");
+                    Document auxDocument = new Document(pinguino);
+                    askInsertDataMongo(collectionPinguinos, auxDocument);
                 }
             }
         }
@@ -91,7 +90,8 @@ public class CrudMongo {
                     System.out.println("Documento de habitats actualizado correctamente");
                 }
                 else{
-                    System.out.println("Coleccion de habitats no encontrada en la base de datos");
+                    Document auxDocument = new Document(habitat);
+                    askInsertDataMongo(collectionHabitat, auxDocument);
                 }
             }
         }
@@ -112,5 +112,23 @@ public class CrudMongo {
         }
     }
 
+    private void askInsertDataMongo(MongoCollection<Document> collection,Document document) {
+        System.out.println("Se ha encontrado unos datos en el xml que no están en la base de datos, desea introducirlos?");
+        System.out.println("responde (si) para introducirlos, responde (no) para no introducirlos");
+        Scanner sc = new Scanner(System.in);
+        String response = sc.nextLine();
+
+        while(!checkResponse(response)) {
+            System.out.println("No te he entendido, responde sí o no");
+        }
+        if(response.equalsIgnoreCase("si")){
+            collection.insertOne(document);
+            System.out.println("Nuevo documento insertado correctamente");
+        }
+    }
+
+    private boolean checkResponse(String response) {
+        return response.equals("si") || response.equals("no");
+    }
 
 }
