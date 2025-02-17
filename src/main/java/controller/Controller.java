@@ -23,24 +23,26 @@ public class Controller {
         List<Map<String, Object>> pinguinsMapSinActualizar= leFich.readXmlFilePinguienos("pingüinos.xml");
         List<Map<String, Object>> habitatsMapSinActualizar = leFich.readXmlFileHabitats("habitats.xml");
 
-        /* lectura de xml sin actualizar
+        /*
         metodosPinguinos.readListPinguins(pinguinsMapSinActualizar);
         metodosHabitats.readListHabitats(habitatsMapSinActualizar);
-         */
 
-        /* inserccion datos mongo
-        logicaInserccionDatos(pinguinsMap, habitatsMap, crudMongo);
-         */
 
-        /* lectura base de datos
+        logicaInserccionDatos(pinguinsMapSinActualizar, habitatsMapSinActualizar, crudMongo);
+
+
         metodosPinguinos.readListPinguins(crudMongo.getDataFromDb("penguins"));
         metodosHabitats.readListHabitats(crudMongo.getDataFromDb("habitats"));
-         */
 
+        */
         List<Map<String, Object>> pinguinsMapActualizado = leFich.readXmlFilePinguienos("pingüinosActualizado.xml");
         List<Map<String, Object>> habitatsMapActualizado = leFich.readXmlFileHabitats("habitatsActualizado.xml");
-        metodosPinguinos.readListPinguins(pinguinsMapActualizado);
-        metodosHabitats.readListHabitats(habitatsMapActualizado);
+
+        //metodosPinguinos.readListPinguins(pinguinsMapActualizado);
+        //metodosHabitats.readListHabitats(habitatsMapActualizado);
+        logicaActualizacionDatos(pinguinsMapActualizado, habitatsMapActualizado, crudMongo);
+
+
 
     }
 
@@ -48,5 +50,10 @@ public class Controller {
     public void logicaInserccionDatos(List<Map<String, Object>> pinguinsMap, List<Map<String, Object>> habitatsMap, CrudMongo crudMongo){
         crudMongo.inserdataHabitats(habitatsMap);
         crudMongo.inserdataPenguins(pinguinsMap);
+    }
+
+    public void logicaActualizacionDatos(List<Map<String, Object>> pinguinsMap, List<Map<String, Object>> habitatsMap, CrudMongo crudMongo){
+        crudMongo.updateDataPinguinos(pinguinsMap);
+        crudMongo.updateDataHabitats(habitatsMap);
     }
 }

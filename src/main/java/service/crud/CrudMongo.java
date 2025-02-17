@@ -63,9 +63,35 @@ public class CrudMongo {
                                     Updates.set("caracteristicas", pinguino.get("caracteristicas"))
                             )
                     );
-                    System.out.println("Documento actualizado: " + nome);
+                    System.out.println("Documento de pingüinos actualizado correctamente");
                 } else {
-                    System.out.println("Pingüino no encontrado en la base de datos: " + nome);
+                    System.out.println("coleccion de pingüino no encontrada en la base de datos");
+                }
+            }
+        }
+    }
+
+    public void updateDataHabitats(List<Map<String, Object>> habitatsList){
+        MongoCollection<Document> collectionHabitat = mongoDatabase.getCollection("habitats");
+        for (Map<String, Object> habitat : habitatsList) {
+            String nome = (String) habitat.get("nome");
+            if (nome != null) {
+                Document document = collectionHabitat.find(Filters.eq("nome", nome)).first();
+                if(document != null) {
+                    collectionHabitat.updateOne(
+                            Filters.eq("nome", nome),
+                            Updates.combine(
+                                    Updates.set("localizacion", habitat.get("localizacion")),
+                                    Updates.set("especiesPinguins", habitat.get("especiesPinguins")),
+                                    Updates.set("descripcion", habitat.get("descripcion")),
+                                    Updates.set("temperatura", habitat.get("temperatura")),
+                                    Updates.set("caracteristicas", habitat.get("caracteristicas"))
+                            )
+                    );
+                    System.out.println("Documento de habitats actualizado correctamente");
+                }
+                else{
+                    System.out.println("Coleccion de habitats no encontrada en la base de datos");
                 }
             }
         }

@@ -36,4 +36,16 @@ public class LecturaEscrituraFicheros {
         }
         return null;
     }
+
+    public void writeXmlActualizadoFromDbPentas(List<Map<String, Object>> object){
+        XmlMapper xmlMapper = new XmlMapper();
+        try{
+            File file = new File("pingüinosActuFromDB.xml");
+            PinguinsWrapper pinguinsWrapper = new PinguinsWrapper();
+            pinguinsWrapper.setPinguinsMap(object);
+            xmlMapper.writerWithDefaultPrettyPrinter().writeValue(file, pinguinsWrapper);
+        }catch (IOException e){
+            System.out.println("Ups, error al crear el xml actualizado de pingüinos");
+        }
+    }
 }
