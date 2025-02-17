@@ -1,7 +1,14 @@
 package model.clases;
 
+/**
+ * Representa un pingüino con información sobre su nombre, nombre científico, hábitat,
+ * descripción, alimentación, tamaño, peso y características.
+ * @author cristian
+ * @version 1.0
+ */
 public class Pinguins {
 
+    //atributos de clase
     private String nome;
     private String nomeCientifico;
     private String habitat;
@@ -11,6 +18,18 @@ public class Pinguins {
     private String peso;
     private String caracteristicas;
 
+    /**
+     * Constructor con parámetros para inicializar un pingüino.
+     *
+     * @param nome Nombre del pingüino.
+     * @param nomeCientifico Nombre científico del pingüino.
+     * @param habitat Hábitat del pingüino.
+     * @param descripcion Descripción del pingüino.
+     * @param alimentacion Alimentación del pingüino.
+     * @param tamaño Tamaño del pingüino.
+     * @param peso Peso del pingüino.
+     * @param caracteristicas Características adicionales del pingüino.
+     */
     public Pinguins(String nome, String nomeCientifico, String habitat, String descripcion, String alimentacion, String tamaño, String peso, String caracteristicas) {
         this.nome = nome;
         this.nomeCientifico = nomeCientifico;
@@ -29,6 +48,7 @@ public class Pinguins {
     }
 
 
+    //getter y setter
     public String getNome() {
         return nome;
     }

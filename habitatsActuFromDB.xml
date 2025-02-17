@@ -1,9 +1,5 @@
 <habitats>
   <habitat>
-    <_id>
-      <timestamp>1739807844</timestamp>
-      <date>1739807844000</date>
-    </_id>
     <nome>Antártida</nome>
     <localizacion>Antártida</localizacion>
     <especiesPinguins>
@@ -17,10 +13,6 @@
             pinguíns emperador fan fronte ao frío.</caracteristicas>
   </habitat>
   <habitat>
-    <_id>
-      <timestamp>1739807844</timestamp>
-      <date>1739807844000</date>
-    </_id>
     <nome>Illas Malvinas</nome>
     <localizacion>Atlántico Sur</localizacion>
     <especiesPinguins>
@@ -34,10 +26,6 @@
             especies como o pinguín rei.</caracteristicas>
   </habitat>
   <habitat>
-    <_id>
-      <timestamp>1739807844</timestamp>
-      <date>1739807844000</date>
-    </_id>
     <nome>Islas Galápagos</nome>
     <localizacion>Océano Pacífico, Ecuador</localizacion>
     <especiesPinguins>
@@ -48,10 +36,6 @@
     <caracteristicas>Clima cálido, pinguíns pequenos adaptados ao calor, océano rico en peixes.</caracteristicas>
   </habitat>
   <habitat>
-    <_id>
-      <timestamp>1739807844</timestamp>
-      <date>1739807844000</date>
-    </_id>
     <nome>Illas Kerguelen</nome>
     <localizacion>Oceano Índico Subantártico</localizacion>
     <especiesPinguins>
@@ -63,5 +47,17 @@
     <temperatura>-10°C a 5°C</temperatura>
     <caracteristicas>Rexión moi ventosa e chuviosa, con abundante comida no mar, o que
             permite a supervivencia dos pinguíns nas súas colonias.</caracteristicas>
+  </habitat>
+  <habitat>
+    <nome>Illas Galápagos</nome>
+    <localizacion>Océano Pacífico, Ecuador</localizacion>
+    <especiesPinguins>
+      <especie>Spheniscus mendiculus</especie>
+    </especiesPinguins>
+    <descripcion>O único lugar onde vive o pinguín máis ao norte. Aquí a temperatura é
+            cálida pero a abundancia de peixes permite a supervivencia.</descripcion>
+    <temperatura>20°C a 30°C</temperatura>
+    <caracteristicas>Adaptado a climas cálidos, os pinguíns das Galápagos teñen unha
+            pelaxe máis fina que os seus parentes do sur.</caracteristicas>
   </habitat>
 </habitats>

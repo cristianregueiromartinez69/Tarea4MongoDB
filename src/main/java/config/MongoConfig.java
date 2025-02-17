@@ -4,10 +4,15 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
+/**
+ * Clase de configuración de la base de datos de mongoDB
+ * @author cristian
+ * @version 1.0
+ */
 public class MongoConfig {
 
     /**
-     * variables provadas, estáticas y finales de la url donde está la base de mongo en la nube y el nombre de la base de datos
+     * variables provadas, estáticas y finales del path donde está la base de mongo  y el nombre de la base de datos
      */
     private static final String connectionMongoDb = "mongodb://localhost:27017";
     private static final String databaseName = "dbpentas";

@@ -9,14 +9,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Clase para envolver la lista de objetos de tipo Habitat
+ * @author cristian
+ * @version 1.0
+ */
 @JacksonXmlRootElement(localName = "habitats")
 public class HabitatsWrapper {
 
-
+    //atributo de clase
     @JacksonXmlElementWrapper(useWrapping = false)
     @JsonProperty("habitat")
     private List<Map<String, Object>> habitatsMap;
 
+    //getter y setter
     public List<Map<String, Object>> getHabitatsMap() {
         return habitatsMap;
     }

@@ -1,9 +1,5 @@
 <pinguins>
   <pinguin>
-    <_id>
-      <timestamp>1739807844</timestamp>
-      <date>1739807844000</date>
-    </_id>
     <nome>Emperador</nome>
     <nomeCientifico>Aptenodytes forsteri</nomeCientifico>
     <habitat>Antártida</habitat>
@@ -16,10 +12,6 @@
             colonias.</caracteristicas>
   </pinguin>
   <pinguin>
-    <_id>
-      <timestamp>1739807844</timestamp>
-      <date>1739807844000</date>
-    </_id>
     <nome>Reina</nome>
     <nomeCientifico>Aptenodytes patagonicus</nomeCientifico>
     <habitat>Illas Malvinas, Antártida Subantártica</habitat>
@@ -32,10 +24,6 @@
             para nadar a grandes profundidades.</caracteristicas>
   </pinguin>
   <pinguin>
-    <_id>
-      <timestamp>1739807844</timestamp>
-      <date>1739807844000</date>
-    </_id>
     <nome>Pinguín de Magallanes</nome>
     <nomeCientifico>Spheniscus magellanicus</nomeCientifico>
     <habitat>Costa de Chile e Arxentina</habitat>
@@ -46,5 +34,18 @@
     <peso>4 kg</peso>
     <caracteristicas>Forman grandes colonias de cría e son altamente
             sociables.</caracteristicas>
+  </pinguin>
+  <pinguin>
+    <nome>Pinguín de Humbolt</nome>
+    <nomeCientifico>Spheniscus humboldti</nomeCientifico>
+    <habitat>Costa de Perú e Chile</habitat>
+    <descripcion>Habita na costa do Pacífico e é un dos pinguíns máis pequenos, cun
+            comportamento moi adaptable ao calor.</descripcion>
+    <alimentacion>Peixes, camaróns</alimentacion>
+    <tamaño>0.55 m</tamaño>
+    <peso>2.5 kg</peso>
+    <caracteristicas>É unha das poucas especies de pinguíns que pode soportar
+            temperaturas cálidas debido á súa capacidade para regular a súa temperatura
+            corporal.</caracteristicas>
   </pinguin>
 </pinguins>
