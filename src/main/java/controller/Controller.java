@@ -40,7 +40,10 @@ public class Controller {
 
         //metodosPinguinos.readListPinguins(pinguinsMapActualizado);
         //metodosHabitats.readListHabitats(habitatsMapActualizado);
-        logicaActualizacionDatos(pinguinsMapActualizado, habitatsMapActualizado, crudMongo);
+        //logicaActualizacionDatos(pinguinsMapActualizado, habitatsMapActualizado, crudMongo);
+
+        leFich.writeXmlActualizadoFromDbPentas(crudMongo.getDataFromDb("penguins"));
+        leFich.writeXmlActualizadoFromDbHabitats(crudMongo.getDataFromDb("habitats"));
 
 
 

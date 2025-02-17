@@ -44,6 +44,20 @@ public class LecturaEscrituraFicheros {
             PinguinsWrapper pinguinsWrapper = new PinguinsWrapper();
             pinguinsWrapper.setPinguinsMap(object);
             xmlMapper.writerWithDefaultPrettyPrinter().writeValue(file, pinguinsWrapper);
+            System.out.println("Fichero pinguinos escrito correctamente en el xml");
+        }catch (IOException e){
+            System.out.println("Ups, error al crear el xml actualizado de pingüinos");
+        }
+    }
+
+    public void writeXmlActualizadoFromDbHabitats(List<Map<String, Object>> object){
+        XmlMapper xmlMapper = new XmlMapper();
+        try{
+            File file = new File("habitatsActuFromDB.xml");
+            HabitatsWrapper habitatsWrapper = new HabitatsWrapper();
+            habitatsWrapper.setHabitatsMap(object);
+            xmlMapper.writerWithDefaultPrettyPrinter().writeValue(file, habitatsWrapper);
+            System.out.println("Fichero habitats escrito correctamente en el xml");
         }catch (IOException e){
             System.out.println("Ups, error al crear el xml actualizado de pingüinos");
         }

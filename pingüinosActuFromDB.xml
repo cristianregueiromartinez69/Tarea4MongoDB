@@ -1,0 +1,50 @@
+<pinguins>
+  <pinguin>
+    <_id>
+      <timestamp>1739805540</timestamp>
+      <date>1739805540000</date>
+    </_id>
+    <nome>Emperador</nome>
+    <nomeCientifico>Aptenodytes forsteri</nomeCientifico>
+    <habitat>Antártida</habitat>
+    <descripcion>O pinguín emperador é o maior de todas as especies. Vive en zonas
+            remotas da Antártida, onde as temperaturas son extremadamente baixas.</descripcion>
+    <alimentacion>Peixes, calamares, kril</alimentacion>
+    <tamaño>1.3 m</tamaño>
+    <peso>42 kg</peso>
+    <caracteristicas>É a única especie que cría no inverno antártico, formando grandes
+            colonias.</caracteristicas>
+  </pinguin>
+  <pinguin>
+    <_id>
+      <timestamp>1739805540</timestamp>
+      <date>1739805540000</date>
+    </_id>
+    <nome>Reina</nome>
+    <nomeCientifico>Aptenodytes patagonicus</nomeCientifico>
+    <habitat>Illas Malvinas, Antártida Subantártica</habitat>
+    <descripcion>O pinguín reina, algo máis pequeno que o emperador, vive nas illas
+            subantárticas, onde as condicións son algo máis cálidas.</descripcion>
+    <alimentacion>Peixes, moluscos</alimentacion>
+    <tamaño>0.85 m</tamaño>
+    <peso>13 kg</peso>
+    <caracteristicas>É o segundo maior pinguín do planeta, e ten unha gran capacidade
+            para nadar a grandes profundidades.</caracteristicas>
+  </pinguin>
+  <pinguin>
+    <_id>
+      <timestamp>1739805540</timestamp>
+      <date>1739805540000</date>
+    </_id>
+    <nome>Pinguín de Magallanes</nome>
+    <nomeCientifico>Spheniscus magellanicus</nomeCientifico>
+    <habitat>Costa de Chile e Arxentina</habitat>
+    <descripcion>Este pinguín habita as costas temperadas de Chile e Arxentina. É
+            famoso pola súa migración anual.</descripcion>
+    <alimentacion>Peixes, pequenos cefalópodos</alimentacion>
+    <tamaño>0.65 m</tamaño>
+    <peso>4 kg</peso>
+    <caracteristicas>Forman grandes colonias de cría e son altamente
+            sociables.</caracteristicas>
+  </pinguin>
+</pinguins>
