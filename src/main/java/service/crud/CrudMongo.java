@@ -97,5 +97,20 @@ public class CrudMongo {
         }
     }
 
+    public void deleteDataFromDb(String nameCollection){
+
+        boolean collectionExists = mongoDatabase.listCollectionNames()
+                .into(new ArrayList<>())
+                .contains(nameCollection);
+        if(collectionExists) {
+            MongoCollection<Document> collection = mongoDatabase.getCollection(nameCollection);
+            collection.deleteMany(new Document());
+            System.out.println("Coleccion de " + nameCollection + " eliminada correctamente");
+        }
+        else{
+            System.out.println("La coleccion no existe en la base de datos");
+        }
+    }
+
 
 }

@@ -42,9 +42,11 @@ public class Controller {
         //metodosHabitats.readListHabitats(habitatsMapActualizado);
         //logicaActualizacionDatos(pinguinsMapActualizado, habitatsMapActualizado, crudMongo);
 
-        leFich.writeXmlActualizadoFromDbPentas(crudMongo.getDataFromDb("penguins"));
-        leFich.writeXmlActualizadoFromDbHabitats(crudMongo.getDataFromDb("habitats"));
+        //leFich.writeXmlActualizadoFromDbPentas(crudMongo.getDataFromDb("penguins"));
+        //leFich.writeXmlActualizadoFromDbHabitats(crudMongo.getDataFromDb("habitats"));
 
+        crudMongo.deleteDataFromDb("penguins");
+        crudMongo.deleteDataFromDb("habitats");
 
 
     }
